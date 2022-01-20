@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eee;
+}
+
+main {
+  width: 20vw;
+  min-width: 300px;
+  min-height: 400px;
+  background-color: gainsboro;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  padding: 20px 0;
+  -webkit-box-shadow: -8px -8px 30px rgba(255, 255, 255, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: -8px -8px 30px rgba(255, 255, 255, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+}
+
+#visor {
+  width: 90%;
+  height: 50px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: #06E625;
+  -webkit-box-shadow: 0px 10px 30px rgba(4, 255, 38, 0.9);
+          box-shadow: 0px 10px 30px rgba(4, 255, 38, 0.9);
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+}
+
+.container-btn {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-btn > button {
+  width: 23%;
+  padding: 20px 0;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=estilo.css.map */
