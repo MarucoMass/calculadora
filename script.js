@@ -15,33 +15,29 @@ button.map(buttons => {
              }
              break;
         case '*':
-            if (cuenta.innerText !== '') {
+            if (cuenta.innerText !== '' && cuenta.innerText.includes(e.target.innerText)) return
                 cuenta.innerText += e.target.innerText;
-            }    
             if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
             }
             break; 
         case '/':
-            if (cuenta.innerText !== '') {
-                cuenta.innerText += e.target.innerText;
-            }    
+            if (cuenta.innerText !== '' && cuenta.innerText.includes(e.target.innerText)) return
+            cuenta.innerText += e.target.innerText;
             if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
             }
             break; 
         case '+':
-            if (cuenta.innerText !== '') {
-                cuenta.innerText += e.target.innerText;
-            }    
+            if (cuenta.innerText !== '' && cuenta.innerText.includes(e.target.innerText)) return
+            cuenta.innerText += e.target.innerText; 
             if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
             }
             break; 
         case '-':
-            if (cuenta.innerText !== '') {
-                cuenta.innerText += e.target.innerText;
-            }    
+            if (cuenta.innerText !== '' && cuenta.innerText.includes(e.target.innerText)) return
+            cuenta.innerText += e.target.innerText; 
             if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
             }
@@ -53,8 +49,8 @@ button.map(buttons => {
             }
             break;
             default:
-                cuenta.innerText += e.target.innerText;
-           
+                if (e.target.innerText === '.' && cuenta.innerText.includes('.')) return;
+                cuenta.innerText += e.target.innerText;   
         }
     })
 })
