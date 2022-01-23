@@ -1,6 +1,5 @@
 let cuenta = document.getElementById('cuenta');
 let resultado = document.getElementById('resultado');
-let visor = document.getElementById('visor');
 let button = Array.from(document.getElementsByClassName('button'));
 
 button.map(buttons => {
@@ -16,57 +15,52 @@ button.map(buttons => {
              }
              break;
         case '*':
-            if (cuenta.innerText !== '' || resultado.innerText !== '') {
+            if (cuenta.innerText !== '') {
                 cuenta.innerText += e.target.innerText;
             }    
-            if(resultado.innerText !== ''){
-                cuenta.innerText = cuenta.innerText.slice(-1, 0);
+            if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
-                console.log(cuenta.innerText);
             }
             break; 
         case '/':
-            if (cuenta.innerText !== '' || resultado.innerText !== '') {
+            if (cuenta.innerText !== '') {
                 cuenta.innerText += e.target.innerText;
             }    
-            if(resultado.innerText !== ''){
-                cuenta.innerText = cuenta.innerText.slice(-1, 0);
+            if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
-                console.log(cuenta.innerText);
             }
             break; 
         case '+':
-            if (cuenta.innerText !== '' || resultado.innerText !== '') {
+            if (cuenta.innerText !== '') {
                 cuenta.innerText += e.target.innerText;
             }    
-            if(resultado.innerText !== ''){
-                cuenta.innerText = cuenta.innerText.slice(-1, 0);
+            if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
-                console.log(cuenta.innerText);
             }
             break; 
         case '-':
-            if (cuenta.innerText !== '' || resultado.innerText !== '') {
+            if (cuenta.innerText !== '') {
                 cuenta.innerText += e.target.innerText;
             }    
-            if(resultado.innerText !== ''){
-                cuenta.innerText = cuenta.innerText.slice(-1, 0);
+            if(resultado.innerText){
                 cuenta.innerText = resultado.innerText + e.target.innerText;
-                console.log(cuenta.innerText);
             }
             break; 
          case '=':
             if (cuenta.innerText !== '') {
-                let current = eval(cuenta.innerText);
-                let result = parseFloat(current);
-                let tolocaleString = result.toLocaleString('en');
-                resultado.innerText = tolocaleString;
-                cuenta.innerText = ''; 
-         }
-             break;
-             default:
+                resultado.innerText = eval(cuenta.innerText);
+                // cuenta.innerText = ''; 
+            }
+            break;
+            default:
                 cuenta.innerText += e.target.innerText;
+           
         }
     })
 })
 
+// let current = eval(cuenta.innerText);
+// let result = parseFloat(current);
+// var tolocaleString = result.toLocaleString('en');
+// resultado.innerText = tolocaleString;
+// cuenta.innerText = ''; 
